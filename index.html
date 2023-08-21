@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dent&Bucle-Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <form id="report-damage" class="container">
+
+        <header class="header">
+
+            <div class="logo">
+
+                <img class="logo-goban" src="./images/logo-goban.png" alt="logo-goban">
+
+            </div>
+
+            <div class="titulo">
+                <h3>Structural Damage Report</h3>
+            </div>
+
+        </header>
+
+        <section class="dent-buckle-item">
+            <div id="dent-buckle-item">
+
+                <label for="item"></label> Dent & Buckle Item
+                <input id="item" type="number" required> 
+
+                <label for="date"></label>
+                <input id="date" placeholder="Date" type="date" >
+            </div>
+        </section>
+
+        <section class="main-info"> 
+
+            <div class="labels-main-info">
+                
+                
+                <label  for="operator"></label>
+                <input class="input-main-info" id="operator" placeholder="Operator" type="text" required>
+                
+                <label   for="tail-number"></label>
+                <input class="input-main-info" id="tail-number" placeholder="Tail Number" type="text" required>
+                
+                <label  for="station"></label>
+                <input class="input-main-info" id="station" placeholder="Station" type="text" required>    
+                
+                <label  for="aircraft-msn"></label>
+                <input class="input-main-info" id="aircraft-msn" placeholder="A/C MSN" type="number" required>    
+                
+                <label  for="aircraft-flight-hours"></label>
+                <input class="input-main-info" id="aircraft-flight-hours" placeholder="A/C FH" type="number" required>    
+                
+                <label  for="aircraft-flight-cycles"></label>
+                <input class="input-main-info" id="aircraft-flight-cycles" placeholder="A/C FC" type="number" required>    
+                
+                <label  for="hil-number"></label>
+                <input class="input-main-info" id="hil-number" placeholder="HIL#" type="number" required>    
+                
+                <label  for="log-book"></label>
+                <input class="input-main-info" id="log-book" placeholder="Log Book" type="number" required> 
+            </div>
+            
+
+        </section>
+
+        <h5 id="title-damage-description">Damage Description</h5>
+
+        <section class="damage-description">
+
+            <textarea  placeholder="Damage Description (Write a detail description of damage)" name="Damage Description" id="damage-description"></textarea> 
+
+        </section>
+        <h5 id="title-damage-identification">Damage Identification</h5>
+        <section class="damage-identification">
+
+            
+            <section class="info-damage">
+                
+                <select class="form-select damage-type" aria-label="Small select example">
+                    <option selected>Type of Damage</option>
+                    <option value="1">Crack</option>
+                    <option value="2">Dent</option>
+                    <option value="3">Hole</option>
+                    <option value="4">Scracth</option>
+                    <option value="5">Burn Mark</option>
+                    <option value="6">Delamination</option>
+                    <option value="7">Corrosion</option>
+                    <option value="8">Perforation</option>
+                    <option value="9">Missing Fastener</option>
+                    <option value="10">Nick</option>
+                    <option value="11">Abrasion</option>
+                    <option value="12">Gouge</option>
+                    <option value="13">Debonding</option>
+                    <option value="14">Erosion</option>
+                    
+                </select>
+
+                <select class="form-select cause-damage" aria-label="Small select example">
+                    <option selected>Cause of Damage</option>
+                    <option value="1">Accidental</option>
+                    <option value="2">Lightning Strike</option>
+                    <option value="3">Tool Marks</option>
+                    <option value="4">Maintenance Error</option>
+                    <option value="5">FOD</option>
+                    <option value="6">Unknown</option>
+                    
+                </select>
+                <select class="form-select" aria-label="Small select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                </select>
+                <select class="form-select" aria-label="Small select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                    <option value="3">Three</option>
+                </select>
+                
+                
+
+            </section>
+
+            <section class="location-damage">
+                <textarea  placeholder="Damage Location" name="location-damage" id="damage-location" ></textarea>
+            </section>
+
+
+        </section>
+
+        <h5 id="title-damage-dimensions">Damage Dimensions</h5>
+
+        <section class="damage-dimensions">
+            <div class="measures">
+                <div class="input-container">
+                    <label for="length">Length (L)</label>
+                    <input class="dimensions-input" type="number" id="length" name="length" step="0.01">
+                    <label for="width">Width (W)</label>
+                    <input class="dimensions-input" type="number" id="width" name="width" step="0.01">
+                </div>
+                <br>
+                <div class="input-container">
+                    <label for="depth">Depth (D)</label>
+                    <input class="dimensions-input" type="number" id="depth" name="depth" step="0.01">
+                    <label for="diameter">Diameter (S)</label>
+                    <input class="dimensions-input" type="number" id="diameter" name="diameter" step="0.01">
+                </div>
+                
+                <br>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      in
+                    </label> <br>
+
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      mm
+                    </label>
+                </div>
+                
+            </div>
+                            
+            <div class="rework">
+                <div class="input-container">
+
+                    <label for="original-thickness">Original Thickness (OT)</label>
+                    <input class="rework-input" type="number" id="original-thickness" name="original-thickness" step="0.01">
+                    
+                </div>
+
+                <div class="input-container">
+
+                    <label for="remaining-thickness">Remaining Thickness (RT)</label>
+                    <input class="rework-input" type="number" id="remaining-thickness" name="remaining-thickness" step="0.01">
+                    
+                </div>
+
+                <div class="input-container">
+
+                    <label for="removed-percentage">% Removed Material (RM)</label>
+                    <input class="rework-input" type="number" id="removed-percentage" name="removed-percentage" step="0.01">
+                    
+                </div>
+
+               
+
+            </div>
+        
+
+        </section>
+
+        <h5 id="title-damage-documentation">Damage Documentation</h5>
+
+        <section class="damage-documentation">
+            <div class="input-group">
+                <label for="choose-file"></label>
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="No file found">
+                <input type="text" class="doc-name" id="doc-name" placeholder="Maintenance Reference" required>
+                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Attach</button>
+              </div>
+        </section>
+        
+        <h5 id="title-repair-status">Repair Status</h5>
+
+        <section>
+            <div class="row mb-3">
+                <label for="repair-action" class="col-sm-2 col-form-label">Repair Action</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="repair-action">
+                </div>
+              </div>
+              
+              <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Repair Category</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      Cat A
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                      Cat B
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                    <label class="form-check-label" for="gridRadios3">
+                      Cat C
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              
+              <button type="submit" class="btn btn-outline-success">Send</button>
+        </section>
+        
+        
+
+          
+    </form>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
